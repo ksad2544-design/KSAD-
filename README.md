@@ -1,3 +1,56 @@
+```html
+<!DOCTYPE html>
+<html>
+<head>
+<title>Game Klik Koin</title>
+<style>
+body{
+font-family:Arial;
+text-align:center;
+background:#222;
+color:white;
+}
+
+#coin{
+font-size:80px;
+cursor:pointer;
+margin-top:50px;
+}
+
+button{
+padding:10px 20px;
+font-size:16px;
+margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Game Klik Koin</h1>
+<p>Poin kamu: <span id="score">0</span></p>
+
+<div id="coin">🪙</div>
+
+<button onclick="resetGame()">Reset</button>
+
+<script>
+let score = 0;
+
+document.getElementById("coin").onclick = function(){
+score++;
+document.getElementById("score").innerText = score;
+}
+
+function resetGame(){
+score = 0;
+document.getElementById("score").innerText = score;
+}
+</script>
+
+</body>
+</html>
+```
 <!DOCTYPE html>
 <html>
 <head>
